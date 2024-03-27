@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS goods_events (
     removed Bool,
     event_time DateTime
 ) ENGINE = MergeTree()
-      ORDER BY (event_time, id);
+      ORDER BY (event_time);
 -- +goose StatementEnd
 
 -- +goose Down

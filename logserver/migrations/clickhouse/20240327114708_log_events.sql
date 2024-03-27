@@ -1,12 +1,12 @@
 -- +goose Up
 -- +goose StatementBegin
-create table if not exists log (
-    id Int,
-    time DateTime,
-    message String
+create table if not exists log_events (
+   time DateTime,
+   level String,
+   message String
 )
     ENGINE = MergeTree
-    ORDER BY (time, id);
+    ORDER BY (time);
 -- +goose StatementEnd
 
 -- +goose Down
